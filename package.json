@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "Simon Rückert - SIRU IT"
+  },
+  "dependencies": {
+    "cordova-plugin-file": "^4.3.1"
+  },
+  "description": "API provides an advanced file Upload functionality that persists beyond app termination.",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "upload",
+    "background",
+    "service",
+    "android",
+    "ios"
+  ],
+  "license": "ISC",
+  "main": "demo/index.html",
+  "maintainers": [
+    {
+      "name": "s0h0",
+      "email": "simon.rueckert@siru-it.de"
+    }
+  ],
+  "name": "cordova-plugin-file-transfer-background",
+  "version": "1.0.14",
+  "readme": "Cordova Plugin Filetransfer Background for Apache Cordova\n\n==================================\n\nAPI provides an advanced file download functionality that persists beyond app termination, runs in the background and continues even when the user closed/suspended the application. The plugin includes progress updates and primarily designed for long-term transfer operations for resources like video, music, and large images.\n\n**Sample usage**\n\n```javascript\nvar settings = {\n            \"action\": \"startUpload\",\n            \"fileName\": \"dum13mb.pkg\",\n            \"filePath\": \"file:///private/var/mobile/Containers/Bundle/Application/ABA72822-72DA-4DF5-8C64-260E82469B57/cordovaPluginFileTransfer.app/dum13mb.pkg\",\n            \"serverUrl\": \"http://192.168.10.171:3000/api/upload\",\n            \"apiKey\": \"a4gg8545402c6ee292ed3a8ed3cec04d\",\n            \"apiUser\": \"user_key\",\n            \"apiPass\": \"user_pass\",\n            \"postUrlForCompleted\": \"http://192.168.10.171:3000/api/upload/completed\",\n            \"postUrlForError\": \"http://192.168.10.171:3000/api/upload/error\",\n            \"deleteOnCompleted\": false,\n            \"notificationText\": \"Uploading File in Background\",\n            \"notificationDescription\": \"{{fileName}} - Progress {{progress}} %\",\n            \"notificationTextCompleted\": \"Completed\",\n            \"notificationDescriptionCompleted\": \"Upload successfull\",\n            \"showNotification\": true,\n            \"hideNotificationWhenCompleted\": false\n}\n\nvar fileTransferManager = new FileTransferFacade.FileTransferManager();\nvar uploader = fileTransferManager.createFileUpload(settings);\nvar downloadPromise2 = uploader.startUpload().then(success, error, progress);\n\n```\n\n**Configuration**\n * action \n command that signals the plugin to start the upload \n * fileName\n file name of the file to upload, name can be displayed in notifications\n\n\n**Supported platforms**\n * iOS 7.0 or later\n * Android\n \n\n**Quirks**\n * Concurrent background downloads are NOT currently supported on iOS.",
+  "readmeFilename": "README.md",
+  "_id": "cordova-plugin-file-transfer-background@1.0.14",
+  "_from": "cordova-plugin-file-transfer-background@"
+}

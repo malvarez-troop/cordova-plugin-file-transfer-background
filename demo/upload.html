@@ -1,0 +1,63 @@
+
+<ion-view view-title="Upload Test">
+  <ion-content >
+    <strong>State:</strong>&nbsp;&nbsp;
+    <span ng-bind="state"></span><br>
+
+    <strong>Progress:</strong>&nbsp;&nbsp;
+    <span ng-bind="progress"></span><br>
+<br>
+    <button class="button" ng-click="startUpload()">Start Upload</button>
+    <br><br>
+    <strong>File Name</strong>
+    <input type="text" ng-model="settings.fileName">
+    <strong>File Url</strong>
+    <input type="text" ng-model="settings.filePath">
+    <strong>ServerUrl</strong>
+    <input type="text" ng-model="settings.serverUrl">
+    <strong>apiKey</strong>
+    <input type="text" ng-model="settings.apiKey">
+    <strong>apiUser</strong>
+    <input type="text" ng-model="settings.apiUser">
+    <strong>apiPass</strong>
+    <input type="text" ng-model="settings.apiPass">
+    <strong>postUrlForCompleted</strong>
+    <input type="text" ng-model="settings.postUrlForCompleted">
+    <strong>postUrlForError</strong>
+    <input type="text" ng-model="settings.postUrlForError">
+    <strong>deleteOnCompleted</strong>
+    <input type="checkbox" ng-model="settings.deleteOnCompleted">
+    <strong>notificationText</strong>
+    <input type="text" ng-model="settings.notificationText">
+    <strong>notificationDescription</strong>
+    <input type="text" ng-model="settings.notificationDescription">
+    <strong>notificationTextCompleted</strong>
+    <input type="text" ng-model="settings.notificationTextCompleted">
+    <strong>notificationDescriptionCompleted</strong>
+    <input type="text" ng-model="settings.notificationDescriptionCompleted">
+    <strong>showNotification</strong>
+    <input type="checkbox" ng-model="settings.showNotification">
+    <strong>hideNotificationWhenCompleted</strong>
+    <input type="checkbox" ng-model="settings.hideNotificationWhenCompleted">
+    <br>
+
+
+    <br>
+    <h4>Log</h4>
+    <p ng-bind-html="logText"></p>
+    <br>
+    <style>
+      ion-content
+      {
+        margin:8px;
+      }
+      input
+      {
+        width:100% !important;
+        height:auto !important;
+        margin:0px !important;
+        padding:3px !important;
+      }
+    </style>
+  </ion-content>
+</ion-view>

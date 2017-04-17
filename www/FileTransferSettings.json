@@ -1,0 +1,14 @@
+{
+  "filePath": "",
+  "fileName": "",
+  "serverUrl": "",
+  "serverPort": 0,
+  "serverHeaders": [{"key": "", "value": ""}],
+  "postUrlForCompleted": "http://demo.api/confirmUpload/2342",
+  "deleteOnCompleted": true,
+  "NotficationText": "",
+  "NotificationDescription": "",
+  "onCompleted": 0,
+  "onError": "",
+  "onProgress": ""
+}
